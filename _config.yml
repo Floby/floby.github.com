@@ -1,10 +1,11 @@
-url: "http://www.flo.by"
+url: "http://projects.flo.by"
 pygments: true
 exclude: [/bin, Gemfile, Gemfile.lock]
 markdown: kramdown
 #markdown: rdiscount
 permalink: pretty
 paginate: 5
+menu_item: projects
 
 kramdown:
   entity_output: symbolic
