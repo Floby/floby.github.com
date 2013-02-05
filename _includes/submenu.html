@@ -1,10 +1,18 @@
-{% if site.submenu_base_url != NULL %}
+{% if page.submenu != NULL %}
+    {% assign submenu = page.submenu %}
+{% else %}
+    {% assign submenu = site.submenu %}
+{% endif %}
+
+{% if page.submenu_base_url != NULL %}
+    {% assign base_url = page.submenu_base_url %}
+{% elsif site.submenu_base_url != NULL %}
     {% assign base_url = site.submenu_base_url %}
 {% else %}
     {% assign base_url = site.url %}
 {% endif %}
 <ul class="nav nav-tabs">
-    {% for item in site.submenu %}
+    {% for item in submenu %}
         {% if item.slug == page.submenu_item %}
             <li class="active"><a href="{{ base_url }}{{ item.link }}">{{ item.name }}</a></li>
         {% else %}
