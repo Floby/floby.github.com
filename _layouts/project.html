@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+
+{% if page.project_image != NULL %}
+    {% assign project_image = page.project_image %}
+{% else %}
+    {% assign project_image = site.project_image %}
+{% endif %}
+
 <div class="container">
     <div class="row">
         <hr />
@@ -9,7 +16,7 @@ layout: default
             {{ content }}
         </div>
         <div class="span2 offset2 ">
-            <img src="{{ site.url }}{{ site.project_image }}" />
+            <img src="{{ site.url }}{{ project_image }}" />
         </div>
     </div>
 </iiv>
