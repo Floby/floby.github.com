@@ -14,14 +14,17 @@ submenu:
 
     - slug: tokenizer
       name: Tokenizer
+      disabled: true
       link: /node-tokenizer
 
     - slug: parser
       name: Parser
+      disabled: true
       link: /node-parser
-    
+
     - slug: json-streams
       name: JSON Streams
+      disabled: true
       link: /node-json-streams
 
 ---
